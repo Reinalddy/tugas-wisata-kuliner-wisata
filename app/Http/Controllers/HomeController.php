@@ -8,6 +8,11 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        return view('welcome');
+        return view('home.home');
+    }
+
+    public function menu_index(Request $request)
+    {
+        return view('home.menu');
     }
 }

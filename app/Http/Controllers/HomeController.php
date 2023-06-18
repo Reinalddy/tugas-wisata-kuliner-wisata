@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        return view('home.home');
+        return view('home.content.home');
     }
 
     public function menu_index(Request $request)

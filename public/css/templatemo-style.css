@@ -74,7 +74,7 @@ p {
     padding: 0;
     z-index: 10000;
     transition: all 0.2s ease-in-out;
-    background-color: #eaf0ff;  
+    background-color: #eaf0ff;
     text-align: center;
 }
 
@@ -158,6 +158,21 @@ bootstrap.min.css:5
 .banner {
 	padding: 180px 0px;
 	background-image: url(../img/banner-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
+}
+
+.header-black{
+    color: #121212;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px white;
+}
+
+.banner_wisata{
+    padding: 180px 0px;
+	background-image: url(../img/Wisata/PantaiMuaraBeting.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -346,7 +361,7 @@ section#book-table .left-image img {
 	border-top: none;
 	width: 100%;
 	outline: none;
-	border-bottom: 1px solid #eee;	
+	border-bottom: 1px solid #eee;
 	font-size: 14px;
 	color: #9a9a9a;
 	padding-left: 10px;
@@ -628,7 +643,7 @@ footer ul li i {
 }
 
 footer ul li i:hover {
-	background-color: #f2745f;	
+	background-color: #f2745f;
 }
 
 
@@ -640,7 +655,7 @@ section.page-heading {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	text-align: center; 
+	text-align: center;
 }
 
 .page-heading h1 {

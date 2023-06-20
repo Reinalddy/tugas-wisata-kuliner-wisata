@@ -1,13 +1,15 @@
 @extends('home.master-home.master')
 @section('content')
-<section class="banner">
+<section class="banner_wisata">
   {{-- @include('home.banner.banner') --}}
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h4>Here you can find beutiful place and delicious food</h4>
-                <h2>Bekasi Kotaku</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet saepe sit nam, quaerat iste non laudantium sint! Inventore, provident libero!</p>
+                <h4 class="header-black">Here you can find beutiful place and delicious food</h4>
+                <h2 class="header-black">Bekasi Staycation</h2>
+                <p class="header-black">Selamat datang di pintu gerbang petualangan yang menakjubkan !</p>
+                <p class="header-black">Kami akan memberikan referensi perjalanan yang tak terlupakan dan biarkan diri anda terpesona oleh keajaiban alam yang menakjubkan di kota bekasi</p>
+                <p class="header-black">Jangan hanya mendengar kisah perjalanan orang lain, tapi rasakan sendiri wisata menawan di kota bekasi</p>
             </div>
         </div>
     </div>
@@ -53,32 +55,32 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <a href="menu.html">
-                    <img src="img/cook_breakfast.png" alt="Breakfast">
-                    <h4>Breakfast</h4>
+                    <img src="img/wisata/sabana.jpg" alt="Sabana">
+                    <h4>Sabana</h4>
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <a href="menu.html">
-                    <img src="img/cook_lunch.png" alt="Lunch">
-                    <h4>Lunch</h4>
+                    <img src="img/wisata/gedungjuang.jpg" alt="Gedung Juang">
+                    <h4>History</h4>
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <a href="menu.html">
-                    <img src="img/cook_dinner.png" alt="Dinner">
-                    <h4>Dinner</h4>
+                    <img src="img/wisata/PantaiMuaraBeting.jpg" alt="Pantai">
+                    <h4>Nature</h4>
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <a href="menu.html">
-                    <img src="img/cook_dessert.png" alt="Desserts">
-                    <h4>Desserts</h4>
+                    <img src="img/wisata/GoWetWaterpark.png" alt="Curug">
+                    <h4>Family Vacation</h4>
                     </a>
                 </div>
             </div>
@@ -137,7 +139,7 @@
                             <div class="col-md-6">
                                 <fieldset>
                                     <input name="name" type="name" class="form-control" id="name" placeholder="Full name" required>
-                                </fieldset> 
+                                </fieldset>
                             </div>
                             <div class="col-md-6">
                                 <fieldset>
@@ -331,5 +333,5 @@
         </form>
     </div>
 </section>
-    
+
 @endsection

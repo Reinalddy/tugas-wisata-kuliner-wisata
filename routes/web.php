@@ -20,3 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class,'index']);
 Route::get('/wisata',[HomeController::class,'wisata_index']);
+Route::get('/kuliner',[HomeController::class,'kuliner_index']);
+Route::get('/about_us',[HomeController::class,'about_us_index']);

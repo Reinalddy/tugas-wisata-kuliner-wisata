@@ -203,7 +203,7 @@
                 <div class="food-item">
                     <h2>Breakfast</h2>
                     <img src="img/kuliner2.jpeg" alt="">
-                    <div class="price">$4.50</div>
+                    <div class="price">7 k</div>
                     <div class="text-content">
                         <h4>Nasi Uduk </h4>
                         <p>Terbuat dari bahan baku utama nasi, dan berlauk jengkol,tekur,mie, dan ada juga timun dan kerupuk sebagai pelengkap..</p>
@@ -213,22 +213,22 @@
             <div class="col-md-4">
                 <div class="food-item">
                     <h2>Lunch</h2>
-                    <img src="img/lunch_item.jpg" alt="">
-                    <div class="price">$7.50</div>
+                    <img src="img/kuliner3.jpeg" alt="">
+                    <div class="price">50 k</div>
                     <div class="text-content">
-                        <h4>Taiyaki Gastro Tousled</h4>
-                        <p>Dreamcatcher squid ennui cliche chicharros nes echo  small batch jean shorts hexagon street art knausgaard wolf...</p>
+                        <h4>Sop Janda Bu Darmi</h4>
+                        <p>Sop janda adalah sop daging sapi. Di daerah lain makanan serupa disebut sop jando, merujuk pada tetelan sapi, khususnya bagian punuk dan tulang rawan sapi. Namun konon katanya di Bekasi disebut sop janda, karena merupakan singkatan dari Jawa-Sunda.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="food-item">
                     <h2>Dinner</h2>
-                    <img src="img/dinner_item.jpg" alt="">
-                    <div class="price">$12.50</div>
+                    <img src="img/kuliner4.jpeg" alt="">
+                    <div class="price">20 k</div>
                     <div class="text-content">
-                        <h4>Batch Squid Jean Shorts</h4>
-                        <p>Dreamcatcher squid ennui cliche chicharros nes echo  small batch jean shorts hexagon street art knausgaard wolf...</p>
+                        <h4>Soto betawi</h4>
+                        <p>Soto Betawi merupakan kuliner yang dikenal oleh orang Betawi di daerah Jakarta maupun di luar Jakarta. Seperti halnya soto madura dan soto sulung, dalam pembuatannya soto Betawi juga menggunakan jeroan sapi....</p>
                     </div>
                 </div>
             </div>
@@ -250,12 +250,13 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="blog-post">
-                    <img src="img/blog_post_01.jpg" alt="">
+                    <img src="img/kuliner2.jpeg" alt="">
                     <div class="date">26 Oct 2017</div>
                     <div class="right-content">
-                        <h4>Stumptown Tofu Schlitz</h4>
+                        <h4>nasi uduk</h4>
                         <span>Branding / Admin</span>
-                        <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
+                        <p>Resep Nasi Uduk Sederhana untuk Sajian di Rumah Sehari-hari
+                            Penyuka nasi uduk sebagai menu sarapan? Inilah resep nasi uduk sederhana yang mudah untuk diikuti dari Masak Apa Hari Ini!...</p>
                         <div class="text-button">
                             <a href="#">Continue Reading</a>
                         </div>
@@ -264,12 +265,12 @@
             </div>
             <div class="col-md-6">
                 <div class="blog-post">
-                    <img src="img/blog_post_02.jpg" alt="">
+                    <img src="img/kuliner4.jpeg" alt="">
                     <div class="date">21 Oct 2017</div>
                     <div class="right-content">
-                        <h4>Succulents Hashtag Folk</h4>
+                        <h4>Soto Betawi</h4>
                         <span>Branding / Admin</span>
-                        <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
+                        <p>Bumbu soto betawi di antaranya yaitu cengkih, kayu manis, pala, dan serai. Kamu juga dapat menambahkan minyak samin jika tersedia di rumah. Minyak samin juga menjadi ciri khas soto betawi.</p>
                         <div class="text-button">
                             <a href="#">Continue Reading</a>
                         </div>
@@ -278,12 +279,12 @@
             </div>
             <div class="col-md-6">
                 <div class="blog-post">
-                    <img src="img/blog_post_03.jpg" alt="">
+                    <img src="img/kuliner3.jpeg" alt="">
                     <div class="date">11 Oct 2017</div>
                     <div class="right-content">
-                        <h4>Knaus Sriracha Pinterest</h4>
+                        <h4>sop janda</h4>
                         <span>Dessert / Chef</span>
-                        <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
+                        <p>Lokasinya dekat kawasan MM2100, Cibitung. Ketika jam makan siang, bersiaplah untuk kesulitan parkir. Mereka menyajikan sop iga dengan porsi yang luar biasa dengan tambahan rawit buntet. Pilihannya pedas sekali, pedas sedang dan tidak pedas. Rasa sop sangat gurih walau tidak berlemak...</p>
                         <div class="text-button">
                             <a href="#">Continue Reading</a>
                         </div>
@@ -292,12 +293,12 @@
             </div>
             <div class="col-md-6">
                 <div class="blog-post">
-                    <img src="img/blog_post_04.jpg" alt="">
+                    <img src="img/kebap.jpg" alt="">
                     <div class="date">03 Oct 2017</div>
                     <div class="right-content">
-                        <h4>Crucifix Selvage Coat</h4>
+                        <h4>kebap bang ade</h4>
                         <span>Plate / Chef</span>
-                        <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
+                        <p>Kebab Turki adalah salah satu makanan yang paling populer di Indonesia. Makanan berbahan daging yang dibungkus dengan roti khas arab atau tortilla plus berbagai topping ini diminati oleh berbagai kalangan. Mulai dari orang dewasa dan anak-anak.Selain rasanya yang enak dan memiliki citarasa rempah, kepraktisannya juga menjadi salah satu alasan mengapa kebab banyak di suka...</p>
                         <div class="text-button">
                             <a href="#">Continue Reading</a>
                         </div>

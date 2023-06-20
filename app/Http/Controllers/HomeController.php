@@ -16,6 +16,11 @@ class HomeController extends Controller
         return view('home.menu');
     }
 
+    public function kuliner_index(Request $request)
+    {
+        return view('home.kuliner.kuliner');
+    }
+
     public function wisata_index(Request $request)
     {
         return view('home.wisata.wisata');

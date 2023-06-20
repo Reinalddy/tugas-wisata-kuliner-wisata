@@ -20,12 +20,4 @@ class HomeController extends Controller
     {
         return view('home.wisata.wisata');
     }
-    public function kuliner_index(Request $request)
-    {
-        return view('home.content.home');
-    }
-    public function about_index(Request $request)
-    {
-        return view('home.content.home');
-    }
 }

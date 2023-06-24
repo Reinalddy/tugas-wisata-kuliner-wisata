@@ -3,12 +3,12 @@
 @section('content')
 <div class="row">
   <div class="col-md-12">
-    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#categories-modal">Add New Categories</button>
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#culinery-modal">Add New Culinary</button>
     <table class="table table-striped">
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Categories</th>
+          <th scope="col">Culinary</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -30,11 +30,11 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="categories-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="culinery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Categories</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Culinary</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -44,8 +44,16 @@
               <div class="mb-5">
                   <form action="" enctype="multipart/form-data" id="add_category_form">
                     <div class="form-group mt-3">
-                      <label for="title" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="title" name="title">
+                      <label for="name" class="form-label">Culinary Name</label>
+                      <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="form-group mt-3">
+                      <label for="desc" class="form-label">Culinary Description</label>
+                      <textarea name="desc" id="desc" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group mt-3">
+                      <label for="desc" class="form-label">Culinary Image</label>
+                      <input type="file" name="image_thumbnail" id="image_thumbnail" class="form-control">
                     </div>
                     <button class="btn btn-primary mt-5" type="submit" id="btn-upload-categories">Submit</button>
                     <button class="btn btn-primary mt-5 d-none" type="submit" disabled id="btn-loading-upload-categories">

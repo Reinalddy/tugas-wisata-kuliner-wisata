@@ -8,8 +8,10 @@ use GuzzleHttp\RetryMiddleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\File as RulesFile;
 
 class AdminController extends Controller
 {
@@ -24,6 +26,66 @@ class AdminController extends Controller
         return view('admin.dashboard.kuliner',[
             'kuliner' => $kuliner
         ]);
+    }
+
+    public function kuliner_posts(Request $request)
+    {
+        $validator = Validator::make($request->all(),[
+            'image' => 'mimes:jpg,bmp,png',
+            'name' => 'required',
+            'desc' => 'required'
+        ],
+        [
+            'image.required' => "Image Is Required",
+            'name.required' => "Title is required",
+            'desc.required' => "Description Is Required",
+            'image.mimes' => "image format must jpg,bmp,png"
+        ]);
+
+        if($validator->fails()){
+            return response()->json([
+                'code' => 422,
+                'message' => $validator->messages(),
+                'data' => null
+
+            ]);
+        }
+
+        try {
+            //code...
+            DB::beginTransaction();
+            
+            $kuliner = new Culinary();
+            $kuliner->name = $request->name;
+            $kuliner->desc = $request->desc;
+            $kuliner->image_path = $request->file('image')->store('assets/culinary', 'public');
+            $kuliner->uploaded_by = Auth::user()->id;
+            $kuliner->save();
+
+            DB::commit();
+
+            return response()->json([
+                'code' => 200,
+                'message' => 'Add new Kuliner Success',
+                'data' => $kuliner
+            ]);
+
+        } catch (\Throwable $exception) {
+            //throw $th;
+            DB::rollBack();
+            $message = array(
+                "url"       => url()->current(),
+                "error"     => $exception->getMessage() . " LINE : " . $exception->getLine(),
+                "data"      => $request,
+                "controller"=> app('request')->route()->getAction(),
+            );
+            Log::critical($message);
+            return response()->json([
+                'code' => 400,
+                'message' => trans('messages.went_wrong'),
+                'data' => $message
+            ]);
+        }
     }
 
     public function wisata_index(Request $request)

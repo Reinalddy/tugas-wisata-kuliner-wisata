@@ -17,7 +17,7 @@
 
 
 
-<section class="cook-delecious">
+{{-- <section class="cook-delecious">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-md-offset-1">
@@ -45,11 +45,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
-<section class="services">
+<section class="services" style="margin-top: 5%;">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -90,7 +90,7 @@
 
 
 
-<section id="book-table">
+{{-- <section id="book-table">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -170,11 +170,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
-<section class="get-app">
+{{-- <section class="get-app">
     <div class="container">
         <div class="row">
             <div class="heading">
@@ -185,7 +185,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
@@ -193,7 +193,7 @@
     <div class="container">
         <div class="row">
             <div class="heading">
-                <h2>Weekly Featured Food</h2>
+                <h2>Populer Food This week</h2>
             </div>
         </div>
         <div class="row">
@@ -241,7 +241,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="heading">
-                    <h2>Our blog post</h2>
+                    <h2>Popular Spot In Bekasi</h2>
                 </div>
             </div>
         </div>
@@ -308,7 +308,7 @@
 
 
 
-<section class="sign-up">
+{{-- <section class="sign-up">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -332,6 +332,6 @@
             </div>
         </form>
     </div>
-</section>
+</section> --}}
 
 @endsection

@@ -9,6 +9,7 @@
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Culinary</th>
+          <th scope="col">Uploaded By</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -17,6 +18,7 @@
         <tr>
         <th scope="row">{{ $item->id }}</th>
         <td>{{ $item->name }}</td>
+        <td>{{ $item->user->name }}</td>
         <td>
           <button class="bi bi-trash" onclick="deleteCategories({{ $item->id }})"> Delete</button>
         </td>
@@ -42,7 +44,7 @@
           <div class="col-md-12">
             <div class="container">
               <div class="mb-5">
-                  <form action="" enctype="multipart/form-data" id="add_category_form">
+                  <form enctype="multipart/form-data" id="add_culinary_form">
                     <div class="form-group mt-3">
                       <label for="name" class="form-label">Culinary Name</label>
                       <input type="text" class="form-control" id="name" name="name">
@@ -53,7 +55,7 @@
                     </div>
                     <div class="form-group mt-3">
                       <label for="desc" class="form-label">Culinary Image</label>
-                      <input type="file" name="image_thumbnail" id="image_thumbnail" class="form-control">
+                      <input type="file" name="image" id="image" class="form-control">
                     </div>
                     <button class="btn btn-primary mt-5" type="submit" id="btn-upload-categories">Submit</button>
                     <button class="btn btn-primary mt-5 d-none" type="submit" disabled id="btn-loading-upload-categories">
@@ -84,14 +86,17 @@
         }
   });
 
-  $("#add_category_form").on("submit", function(e){
+  $("#add_culinary_form").on("submit", function(e){
     e.preventDefault();
-    let data = $(this).serialize();
+    let data = new FormData(this);
 
     $.ajax({
       type: "POST",
-      url: "{{ url('/dashboard/categories/add') }}",
+      url: "{{ url('/dashboard/kuliner/posts') }}",
       data: data,
+      cache:false,
+      contentType: false,
+      processData: false,
       dataType: "JSON",
       beforeSend: function (){  
         $("#btn-loading-upload-categories").removeClass('d-none');

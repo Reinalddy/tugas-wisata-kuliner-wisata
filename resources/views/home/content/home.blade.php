@@ -15,7 +15,7 @@
 
 
 
-<section class="cook-delecious">
+{{-- <section class="cook-delecious">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-md-offset-1">
@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
@@ -88,7 +88,7 @@
 
 
 
-<section id="book-table">
+{{-- <section id="book-table">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -168,11 +168,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
-<section class="get-app">
+{{-- <section class="get-app">
     <div class="container">
         <div class="row">
             <div class="heading">
@@ -183,7 +183,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
@@ -239,7 +239,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="heading">
-                    <h2>Our blog post</h2>
+                    <h2>Our Recomendation</h2>
                 </div>
             </div>
         </div>
@@ -306,7 +306,7 @@
 
 
 
-<section class="sign-up">
+{{-- <section class="sign-up">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -330,6 +330,6 @@
             </div>
         </form>
     </div>
-</section>
+</section> --}}
     
 @endsection

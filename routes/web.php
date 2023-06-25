@@ -32,8 +32,12 @@ Route::post('/logout-admin',[AdminController::class,'proccess_logout']);
 
 Route::middleware('admin')->group(function() {
   Route::get('/dashboard',[AdminController::class,'admin_index']);
+
   Route::get('/dashboard/kuliner',[AdminController::class,'kuliner_index']);
+  Route::post('/dashboard/kuliner/posts',[AdminController::class,'kuliner_posts']);
+
   Route::get('/dashboard/wisata',[AdminController::class,'wisata_index']);
+
   Route::get('/dashboard/admin-list',[AdminController::class,'admin_list_index']);
 
 });

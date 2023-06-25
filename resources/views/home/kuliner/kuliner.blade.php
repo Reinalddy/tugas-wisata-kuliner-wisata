@@ -19,7 +19,7 @@
 
 
 
-<section class="cook-delecious">
+{{-- <section class="cook-delecious">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-md-offset-1">
@@ -47,7 +47,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
@@ -92,7 +92,7 @@
 
 
 
-<section id="book-table">
+{{-- <section id="book-table">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -172,11 +172,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
-<section class="get-app">
+{{-- <section class="get-app">
     <div class="container">
         <div class="row">
             <div class="heading">
@@ -187,7 +187,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
@@ -195,7 +195,7 @@
     <div class="container">
         <div class="row">
             <div class="heading">
-                <h2>Weekly Featured Food</h2>
+                <h2>Delicius Food</h2>
             </div>
         </div>
         <div class="row">
@@ -310,7 +310,7 @@
 </section>
 
 
-
+{{-- 
 <section class="sign-up">
     <div class="container">
         <div class="row">
@@ -335,6 +335,6 @@
             </div>
         </form>
     </div>
-</section>
+</section> --}}
     
 @endsection

@@ -72,7 +72,7 @@ http://www.templatemo.com/tm-507-victory
     </section>
 
 
-
+{{-- 
     <section class="cook-delecious">
         <div class="container">
             <div class="row">
@@ -101,7 +101,7 @@ http://www.templatemo.com/tm-507-victory
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
 

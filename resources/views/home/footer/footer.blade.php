@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <p>Copyright &copy; 2017 Victory Template</p>
+                    <p>Copyright &copy; 2023 Bekasi Team</p>
                 </div>
                 <div class="col-md-4">
                     <ul class="social-icons">
@@ -14,7 +14,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <p>Designed by <em>templatemo</em></p>
+                    <p>Designed by <em>Kelompok 2</em></p>
                 </div>
             </div>
         </div>

@@ -55,7 +55,7 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <a href="menu.html">
-                    <img src="img/wisata/sabana.jpg" alt="Sabana">
+                    <img src="{{ asset('img/wisata/sabana.jpg') }}" alt="Sabana">
                     <h4>Sabana</h4>
                     </a>
                 </div>
@@ -63,7 +63,7 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <a href="menu.html">
-                    <img src="img/wisata/gedungjuang.jpg" alt="Gedung Juang">
+                    <img src="{{ asset('img/wisata/gedungjuang.jpg') }}" alt="Gedung Juang">
                     <h4>History</h4>
                     </a>
                 </div>
@@ -71,7 +71,7 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <a href="menu.html">
-                    <img src="img/wisata/PantaiMuaraBeting.jpg" alt="Pantai">
+                    <img src="{{ asset('img/wisata/PantaiMuaraBeting.jpg') }}" alt="Pantai">
                     <h4>Nature</h4>
                     </a>
                 </div>
@@ -79,7 +79,7 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <a href="menu.html">
-                    <img src="img/wisata/GoWetWaterpark.png" alt="Curug">
+                    <img src="{{ asset('img/wisata/GoWetWaterpark.png') }}" alt="Curug">
                     <h4>Family Vacation</h4>
                     </a>
                 </div>

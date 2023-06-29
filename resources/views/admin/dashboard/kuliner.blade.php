@@ -1,5 +1,7 @@
 @extends('admin.master.master-admin')
 
+@section('title','Culinary')
+
 @section('content')
 <div class="row">
   <div class="col-md-12">
@@ -20,7 +22,7 @@
         <td>{{ $item->name }}</td>
         <td>{{ $item->user->name }}</td>
         <td>
-          <button class="bi bi-trash" onclick="deleteCategories({{ $item->id }})"> Delete</button>
+          <button class="bi bi-trash" onclick="deleteKuliner({{ $item->id }})"> Delete</button>
         </td>
             
       </tr>
@@ -130,7 +132,7 @@
 });
 
 
-function deleteCategories(id) {
+function deleteKuliner(id) {
     Swal.fire({
     title: 'This data will deleted permanently Are You Sure ?',
     showCancelButton: true,
@@ -141,7 +143,7 @@ function deleteCategories(id) {
     if (result.isConfirmed) {
         $.ajax({
           type: "post",
-          url: "{{ url('/dashboard/categories/delete/') }}/" + id,
+          url: "{{ url('/dashboard/kuliner/delete') }}/" + id,
           data: {'id' : id},
           dataType: "json",
           success: function (response) {

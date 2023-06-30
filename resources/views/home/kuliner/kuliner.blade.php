@@ -51,7 +51,7 @@
 
 
 
-<section class="services">
+<section class="services" style="margin-top: 5%;">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -195,22 +195,25 @@
     <div class="container">
         <div class="row">
             <div class="heading">
-                <h2>Delicius Food</h2>
+                <h2>Rekomendasi Kuliner</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4">
+                @foreach ($kuliner as $item)
                 <div class="food-item">
-                    <h2>Breakfast</h2>
-                    <img src="img/kuliner2.jpeg" alt="">
-                    <div class="price">7 k</div>
+                    <h2>{{ $item->test }}</h2>
+                    <img src="{{ url("/storage/$item->image_path") }}" alt="">
+                    {{-- <div class="price">7 k</div> --}}
                     <div class="text-content">
-                        <h4>Nasi Uduk </h4>
-                        <p>Terbuat dari bahan baku utama nasi, dan berlauk jengkol,tekur,mie, dan ada juga timun dan kerupuk sebagai pelengkap..</p>
+                        {{-- <h4>Nasi Uduk </h4> --}}
+                        <p>{{ $item->desc }}</p>
                     </div>
                 </div>
+                    
+                @endforeach
             </div>
-            <div class="col-md-4">
+            {{-- <div class="col-md-4">
                 <div class="food-item">
                     <h2>Lunch</h2>
                     <img src="img/kuliner3.jpeg" alt="">
@@ -231,14 +234,14 @@
                         <p>Soto Betawi merupakan kuliner yang dikenal oleh orang Betawi di daerah Jakarta maupun di luar Jakarta. Seperti halnya soto madura dan soto sulung, dalam pembuatannya soto Betawi juga menggunakan jeroan sapi....</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
 
 
 
-<section class="our-blog">
+{{-- <section class="our-blog">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -307,7 +310,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 {{-- 

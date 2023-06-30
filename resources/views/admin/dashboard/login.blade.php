@@ -11,9 +11,15 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <style>
+
+body {
+  background-image: url("/img/bg_login_admin.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+}
 .login-form {
     width: 340px;
-    margin: 50px auto;
+    margin: 12% auto;
   	font-size: 15px;
 }
 .login-form form {

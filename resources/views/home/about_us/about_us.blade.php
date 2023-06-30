@@ -15,7 +15,7 @@
 
 
 
-<section class="cook-delecious">
+{{-- <section class="cook-delecious">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-md-offset-1">
@@ -43,11 +43,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
-<section class="services">
+{{-- <section class="services" style="margin-top: 5%;>
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -84,11 +84,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
-<section id="book-table">
+{{-- <section id="book-table">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -168,11 +168,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
-<section class="get-app">
+{{-- <section class="get-app">
     <div class="container">
         <div class="row">
             <div class="heading">
@@ -183,7 +183,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
@@ -191,33 +191,88 @@
     <div class="container">
         <div class="row">
             <div class="heading">
-                <h2>Weekly Featured Food</h2>
+                <h2>Who Make This Website</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="food-item">
-                    <h2>Breakfast</h2>
-                    <img src="img/breakfast_item.jpg" alt="">
-                    <div class="price">$4.50</div>
+                    <h2>REINALDDY</h2>
+                    {{-- <img src="img/breakfast_item.jpg" alt=""> --}}
+                    {{-- <div class="price">312110522</div> --}}
                     <div class="text-content">
-                        <h4>Kale Chips Art Party</h4>
-                        <p>Dreamcatcher squid ennui cliche chicharros nes echo  small batch jean shorts hexagon street art knausgaard wolf...</p>
+                        <h4>312110522</h4>
+                        <p>Full Stack Developer</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="food-item">
-                    <h2>Lunch</h2>
-                    <img src="img/lunch_item.jpg" alt="">
-                    <div class="price">$7.50</div>
+                    <h2>HELMI ANUAR</h2>
+                    {{-- <img src="img/lunch_item.jpg" alt=""> --}}
+                    {{-- <div class="price">$7.50</div> --}}
                     <div class="text-content">
-                        <h4>Taiyaki Gastro Tousled</h4>
-                        <p>Dreamcatcher squid ennui cliche chicharros nes echo  small batch jean shorts hexagon street art knausgaard wolf...</p>
+                        <h4>312110475</h4>
+                        <p>Front End Developer</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
+                <div class="food-item">
+                    <h2>ISEP SOPIANDANI</h2>
+                    {{-- <img src="img/lunch_item.jpg" alt=""> --}}
+                    {{-- <div class="price">$7.50</div> --}}
+                    <div class="text-content">
+                        <h4>312110593</h4>
+                        <p>Front End Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="food-item">
+                    <h2>MUHAMAD WAHYU TRISNA AJI</h2>
+                    {{-- <img src="img/lunch_item.jpg" alt=""> --}}
+                    {{-- <div class="price">$7.50</div> --}}
+                    <div class="text-content">
+                        <h4>312110615</h4>
+                        <p>Front End Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="food-item">
+                    <h2>MUHAMMAD IQBAL</h2>
+                    {{-- <img src="img/lunch_item.jpg" alt=""> --}}
+                    {{-- <div class="price">$7.50</div> --}}
+                    <div class="text-content">
+                        <h4>312110357</h4>
+                        <p>Back End Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="food-item">
+                    <h2>ELIA WILLIAM ARITONANG</h2>
+                    {{-- <img src="img/lunch_item.jpg" alt=""> --}}
+                    {{-- <div class="price">$7.50</div> --}}
+                    <div class="text-content">
+                        <h4>312110456</h4>
+                        <p>Front End Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="food-item">
+                    <h2>ALFIYAN NURUZZAMAN</h2>
+                    {{-- <img src="img/lunch_item.jpg" alt=""> --}}
+                    {{-- <div class="price">$7.50</div> --}}
+                    <div class="text-content">
+                        <h4>312110378</h4>
+                        <p>Front End Developer</p>
+                    </div>
+                </div>
+            </div>
+            {{-- <div class="col-md-4">
                 <div class="food-item">
                     <h2>Dinner</h2>
                     <img src="img/dinner_item.jpg" alt="">
@@ -227,14 +282,14 @@
                         <p>Dreamcatcher squid ennui cliche chicharros nes echo  small batch jean shorts hexagon street art knausgaard wolf...</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
 
 
 
-<section class="our-blog">
+{{-- <section class="our-blog">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -302,11 +357,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
-<section class="sign-up">
+{{-- <section class="sign-up">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -330,6 +385,6 @@
             </div>
         </form>
     </div>
-</section>
+</section>  --}}
     
 @endsection

@@ -193,50 +193,31 @@
     <div class="container">
         <div class="row">
             <div class="heading">
-                <h2>Populer Food This week</h2>
+                <h2>Rekomendasi Wisata</h2>
             </div>
         </div>
         <div class="row">
+            @foreach ($wisata as $item)
             <div class="col-md-4">
                 <div class="food-item">
-                    <h2>Breakfast</h2>
-                    <img src="img/breakfast_item.jpg" alt="">
-                    <div class="price">$4.50</div>
+                    <h2>{{ $item->name }}</h2>
+                    <img src={{ url("/storage/$item->image_path") }} alt="">
+                    {{-- <div class="price">$4.50</div> --}}
                     <div class="text-content">
-                        <h4>Kale Chips Art Party</h4>
-                        <p>Dreamcatcher squid ennui cliche chicharros nes echo  small batch jean shorts hexagon street art knausgaard wolf...</p>
+                        {{-- <h4>Kale Chips Art Party</h4> --}}
+                        <p>{{ $item->desc }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="food-item">
-                    <h2>Lunch</h2>
-                    <img src="img/lunch_item.jpg" alt="">
-                    <div class="price">$7.50</div>
-                    <div class="text-content">
-                        <h4>Taiyaki Gastro Tousled</h4>
-                        <p>Dreamcatcher squid ennui cliche chicharros nes echo  small batch jean shorts hexagon street art knausgaard wolf...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="food-item">
-                    <h2>Dinner</h2>
-                    <img src="img/dinner_item.jpg" alt="">
-                    <div class="price">$12.50</div>
-                    <div class="text-content">
-                        <h4>Batch Squid Jean Shorts</h4>
-                        <p>Dreamcatcher squid ennui cliche chicharros nes echo  small batch jean shorts hexagon street art knausgaard wolf...</p>
-                    </div>
-                </div>
-            </div>
+                
+            @endforeach
         </div>
     </div>
 </section>
 
 
 
-<section class="our-blog">
+{{-- <section class="our-blog">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -304,7 +285,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 

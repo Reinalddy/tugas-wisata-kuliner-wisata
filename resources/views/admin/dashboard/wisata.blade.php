@@ -22,7 +22,7 @@
         <td>{{ $item->name }}</td>
         <td>{{ $item->user->name }}</td>
         <td>
-          <button class="bi bi-trash" onclick="deleteKuliner({{ $item->id }})"> Delete</button>
+          <button class="bi bi-trash" onclick="deleteWisata({{ $item->id }})"> Delete</button>
         </td>
             
       </tr>
@@ -58,6 +58,15 @@
                     <div class="form-group mt-3">
                       <label for="desc" class="form-label">Tours Image</label>
                       <input type="file" name="image" id="image" class="form-control">
+                    </div>
+                    <div class="form-group mt-3">
+                      <label for="desc" class="form-label">Culinary Image</label>
+                      <select id="categories" class="form-control" name="category">
+                        @foreach ($categories as $item)
+                            
+                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                        @endforeach
+                      </select>
                     </div>
                     <button class="btn btn-primary mt-5" type="submit" id="btn-upload-categories">Submit</button>
                     <button class="btn btn-primary mt-5 d-none" type="submit" disabled id="btn-loading-upload-categories">
@@ -132,7 +141,7 @@
 });
 
 
-function deleteKuliner(id) {
+function deleteWisata(id) {
     Swal.fire({
     title: 'This data will deleted permanently Are You Sure ?',
     showCancelButton: true,
@@ -143,7 +152,7 @@ function deleteKuliner(id) {
     if (result.isConfirmed) {
         $.ajax({
           type: "post",
-          url: "{{ url('/dashboard/kuliner/delete') }}/" + id,
+          url: "{{ url('/dashboard/wisata/delete') }}/" + id,
           data: {'id' : id},
           dataType: "json",
           success: function (response) {

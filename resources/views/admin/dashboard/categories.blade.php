@@ -1,28 +1,28 @@
 @extends('admin.master.master-admin')
 
-@section('title','Culinary')
+@section('title','Categories')
 
 @section('content')
 <div class="row">
   <div class="col-md-12">
-    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#culinery-modal">Add New Culinary</button>
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#categories-modal">Add New Categories</button>
     <table class="table table-striped">
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Culinary</th>
-          <th scope="col">Uploaded By</th>
+          <th scope="col">Name</th>
+          {{-- <th scope="col">Uploaded By</th> --}}
           <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
-        @foreach ($kuliner as $item)
+        @foreach ($categories as $item)
         <tr>
         <th scope="row">{{ $item->id }}</th>
         <td>{{ $item->name }}</td>
-        <td>{{ $item->user->name }}</td>
+        {{-- <td>{{ $item->user->name }}</td> --}}
         <td>
-          <button class="bi bi-trash" onclick="deleteKuliner({{ $item->id }})"> Delete</button>
+          <button class="bi bi-trash" onclick="deleteCategories({{ $item->id }})"> Delete</button>
         </td>
             
       </tr>
@@ -34,11 +34,11 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="culinery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="categories-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Culinary</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Categories</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -48,25 +48,8 @@
               <div class="mb-5">
                   <form enctype="multipart/form-data" id="add_culinary_form">
                     <div class="form-group mt-3">
-                      <label for="name" class="form-label">Culinary Name</label>
+                      <label for="name" class="form-label">Categories Name</label>
                       <input type="text" class="form-control" id="name" name="name">
-                    </div>
-                    <div class="form-group mt-3">
-                      <label for="desc" class="form-label">Culinary Description</label>
-                      <textarea name="desc" id="desc" cols="30" rows="10" class="form-control"></textarea>
-                    </div>
-                    <div class="form-group mt-3">
-                      <label for="desc" class="form-label">Culinary Image</label>
-                      <input type="file" name="image" id="image" class="form-control">
-                    </div>
-                    <div class="form-group mt-3">
-                      <label for="desc" class="form-label">Culinary Image</label>
-                      <select id="categories" class="form-control" name="category">
-                        @foreach ($categories as $item)
-                            
-                        <option value="{{ $item->id }}">{{ $item->name }}</option>
-                        @endforeach
-                      </select>
                     </div>
                     <button class="btn btn-primary mt-5" type="submit" id="btn-upload-categories">Submit</button>
                     <button class="btn btn-primary mt-5 d-none" type="submit" disabled id="btn-loading-upload-categories">
@@ -103,7 +86,7 @@
 
     $.ajax({
       type: "POST",
-      url: "{{ url('/dashboard/kuliner/posts') }}",
+      url: "{{ url('/dashboard/admin/categories/add') }}",
       data: data,
       cache:false,
       contentType: false,
@@ -141,7 +124,7 @@
 });
 
 
-function deleteKuliner(id) {
+function deleteCategories(id) {
     Swal.fire({
     title: 'This data will deleted permanently Are You Sure ?',
     showCancelButton: true,
@@ -152,7 +135,7 @@ function deleteKuliner(id) {
     if (result.isConfirmed) {
         $.ajax({
           type: "post",
-          url: "{{ url('/dashboard/kuliner/delete') }}/" + id,
+          url: "{{ url('/dashboard/admin/categories/delete/') }}/" + id,
           data: {'id' : id},
           dataType: "json",
           success: function (response) {

@@ -191,22 +191,26 @@
     <div class="container">
         <div class="row">
             <div class="heading">
-                <h2>Weekly Featured Food</h2>
+                <h2>Rekomendasi Kuliner</h2>
             </div>
         </div>
         <div class="row">
+            @foreach ($kuliner as $item)
             <div class="col-md-4">
                 <div class="food-item">
-                    <h2>Breakfast</h2>
-                    <img src="img/breakfast_item.jpg" alt="">
-                    <div class="price">$4.50</div>
+                    <h2>{{ $item->name }}</h2>
+                    <img src="{{ url("/storage/$item->image_path") }}" alt="">
+                    {{-- <div class="price">$4.50</div> --}}
                     <div class="text-content">
-                        <h4>Kale Chips Art Party</h4>
-                        <p>Dreamcatcher squid ennui cliche chicharros nes echo  small batch jean shorts hexagon street art knausgaard wolf...</p>
+                        {{-- <h4>Kale Chips Art Party</h4> --}}
+                        <p>{{ $item->desc }}</p>
                     </div>
+                    <a href="#" class="btn btn-primary" style="margin-top: 5%;">Detail</a>
                 </div>
             </div>
-            <div class="col-md-4">
+                
+            @endforeach
+            {{-- <div class="col-md-4">
                 <div class="food-item">
                     <h2>Lunch</h2>
                     <img src="img/lunch_item.jpg" alt="">
@@ -227,7 +231,7 @@
                         <p>Dreamcatcher squid ennui cliche chicharros nes echo  small batch jean shorts hexagon street art knausgaard wolf...</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
@@ -239,67 +243,28 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="heading">
-                    <h2>Our Recomendation</h2>
+                    <h2>Rekomendasi Wisata</h2>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <img src="img/blog_post_01.jpg" alt="">
-                    <div class="date">26 Oct 2017</div>
+            @foreach ($tours as $item)
+            <div class="col-md-4">
+                <div class="" style="background-color:white;">
+                    <img src="{{ url("/storage/$item->image_path") }}" alt="" style="width: 80%; height:100%;">
+                    {{-- <div class="date">26 Oct 2017</div> --}}
                     <div class="right-content">
-                        <h4>Stumptown Tofu Schlitz</h4>
-                        <span>Branding / Admin</span>
-                        <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
+                        <h4>{{ $item->name }}</h4>
+                        {{-- <span>Branding / Admin</span> --}}
+                        <p>{{ $item->desc }}</p>
                         <div class="text-button">
                             <a href="#">Continue Reading</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <img src="img/blog_post_02.jpg" alt="">
-                    <div class="date">21 Oct 2017</div>
-                    <div class="right-content">
-                        <h4>Succulents Hashtag Folk</h4>
-                        <span>Branding / Admin</span>
-                        <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
-                        <div class="text-button">
-                            <a href="#">Continue Reading</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <img src="img/blog_post_03.jpg" alt="">
-                    <div class="date">11 Oct 2017</div>
-                    <div class="right-content">
-                        <h4>Knaus Sriracha Pinterest</h4>
-                        <span>Dessert / Chef</span>
-                        <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
-                        <div class="text-button">
-                            <a href="#">Continue Reading</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <img src="img/blog_post_04.jpg" alt="">
-                    <div class="date">03 Oct 2017</div>
-                    <div class="right-content">
-                        <h4>Crucifix Selvage Coat</h4>
-                        <span>Plate / Chef</span>
-                        <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
-                        <div class="text-button">
-                            <a href="#">Continue Reading</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                
+            @endforeach
         </div>
     </div>
 </section>

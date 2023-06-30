@@ -39,9 +39,14 @@ Route::middleware('admin')->group(function() {
 
   Route::get('/dashboard/wisata',[AdminController::class,'wisata_index']);
   Route::post('/dashboard/wisata/add',[AdminController::class,'add_wisata']);
+  Route::post('/dashboard/wisata/delete/{id}',[AdminController::class,'delete_wisata']);
 
   Route::get('/dashboard/admin-list',[AdminController::class,'admin_list_index']);
   Route::post('/dashboard/admin/add',[AdminController::class,'admin_add']);
   Route::post('/dashboard/admin/delete/{id}',[AdminController::class,'delete_admin']);
+
+  Route::get('/dashboard/admin/categories',[AdminController::class,'categories_index']);
+  Route::post('/dashboard/admin/categories/add',[AdminController::class,'categories_add']);
+  Route::post('/dashboard/admin/categories/delete/{id}',[AdminController::class,'categories_delete']);
 
 });

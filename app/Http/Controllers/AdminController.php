@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Culinary;
 use App\Models\Tours;
 use App\Models\User;
@@ -34,8 +35,10 @@ class AdminController extends Controller
     public function kuliner_index(Request $request)
     {
         $kuliner = Culinary::with('user')->get();
+        $categories = Category::all();
         return view('admin.dashboard.kuliner',[
-            'kuliner' => $kuliner
+            'kuliner' => $kuliner,
+            'categories' => $categories
         ]);
     }
 
@@ -71,6 +74,7 @@ class AdminController extends Controller
             $kuliner->desc = $request->desc;
             $kuliner->image_path = $request->file('image')->store('assets/culinary', 'public');
             $kuliner->uploaded_by = Auth::user()->id;
+            $kuliner->category_id = $request->category;
             $kuliner->save();
 
             DB::commit();
@@ -131,8 +135,10 @@ class AdminController extends Controller
     public function wisata_index(Request $request)
     {
         $wisata = Tours::with('user')->get();
+        $categories = Category::all();
         return view('admin.dashboard.wisata',[
-            'wisata' => $wisata
+            'wisata' => $wisata,
+            'categories' => $categories
         ]);
     }
 
@@ -168,6 +174,7 @@ class AdminController extends Controller
             $tours->desc = $request->desc;
             $tours->image_path = $request->file('image')->store('assets/culinary', 'public');
             $tours->uploaded_by = Auth::user()->id;
+            $tours->category_id = $request->category;
             $tours->save();
 
             DB::commit();
@@ -180,6 +187,35 @@ class AdminController extends Controller
 
         } catch (\Throwable $exception) {
             //throw $th;
+            DB::rollBack();
+            $message = array(
+                "url"       => url()->current(),
+                "error"     => $exception->getMessage() . " LINE : " . $exception->getLine(),
+                "data"      => $request,
+                "controller"=> app('request')->route()->getAction(),
+            );
+            Log::critical($message);
+            return response()->json([
+                'code' => 400,
+                'message' => trans('messages.went_wrong'),
+                'data' => $message
+            ]);
+        }
+    }
+
+    public function delete_wisata(Request $request, $id)
+    {
+        try {
+            $tours = Tours::find($id);
+            $tours->delete();
+
+            return response()->json([
+                'code' => 200,
+                'message' => 'Delete tours Success',
+                'data' => $tours
+            ]);
+
+        } catch (\Throwable $exception) {
             DB::rollBack();
             $message = array(
                 "url"       => url()->current(),
@@ -363,6 +399,100 @@ class AdminController extends Controller
 
 
 
+    }
+
+    public function categories_index(Request $request)
+    {
+        $categories = Category::all();
+        return view('admin.dashboard.categories',[
+            'categories' => $categories
+        ]);
+    }
+
+    public function categories_add(Request $request)
+    {
+        $validator = Validator::make($request->all(),[
+            // 'image' => 'mimes:jpg,bmp,png',
+            'name' => 'required',
+            // 'desc' => 'required'
+        ],
+        [
+            // 'image.required' => "Image Is Required",
+            'name.required' => "Title is required",
+            // 'desc.required' => "Description Is Required",
+            // 'image.mimes' => "image format must jpg,bmp,png"
+        ]);
+
+        if($validator->fails()){
+            return response()->json([
+                'code' => 422,
+                'message' => $validator->messages(),
+                'data' => null
+
+            ]);
+        }
+
+        try {
+            //code...
+            DB::beginTransaction();
+            
+            $categories = new Category();
+            $categories->name = $request->name;
+            $categories->save();
+
+            DB::commit();
+
+            return response()->json([
+                'code' => 200,
+                'message' => 'Add new categories Success',
+                'data' => $categories
+            ]);
+
+        } catch (\Throwable $exception) {
+            //throw $th;
+            DB::rollBack();
+            $message = array(
+                "url"       => url()->current(),
+                "error"     => $exception->getMessage() . " LINE : " . $exception->getLine(),
+                "data"      => $request,
+                "controller"=> app('request')->route()->getAction(),
+            );
+            Log::critical($message);
+            return response()->json([
+                'code' => 400,
+                'message' => trans('messages.went_wrong'),
+                'data' => $message
+            ]);
+        }
+    }
+
+    public function categories_delete(Request $request, $id)
+    {
+        try {
+            $categories = Category::find($id);
+            $categories->delete();
+
+            return response()->json([
+                'code' => 200,
+                'message' => 'Delete categories Success',
+                'data' => $categories
+            ]);
+
+        } catch (\Throwable $exception) {
+            DB::rollBack();
+            $message = array(
+                "url"       => url()->current(),
+                "error"     => $exception->getMessage() . " LINE : " . $exception->getLine(),
+                "data"      => $request,
+                "controller"=> app('request')->route()->getAction(),
+            );
+            Log::critical($message);
+            return response()->json([
+                'code' => 400,
+                'message' => trans('messages.went_wrong'),
+                'data' => $message
+            ]);
+        }
     }
 
     public function proccess_logout(Request $request)

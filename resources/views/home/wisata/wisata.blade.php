@@ -27,7 +27,7 @@
             <h1 class="display-4">Wisata Keren Di Bekasi</h1>
          </div>
       </div>
-      <input type="text" class="form-control mb-5" placeholder="Cari Wisata" id="searchWisata" oninput="searchKuliner(this.value)">
+      <input type="text" class="form-control mb-5" placeholder="Cari Wisata" id="searchWisata" oninput="searchWisata(this.value)">
       <div class="row" id="wisata-list">
       </div>
    </div>
@@ -77,8 +77,7 @@
         });
     }
 
-    function searchKuliner(text) {
-      console.log(text);
+    function searchWisata(text) {
       let data = {
          search : text
       }

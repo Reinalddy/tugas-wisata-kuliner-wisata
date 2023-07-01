@@ -27,7 +27,7 @@
             <h1 class="display-4">Kuliner Enak Di bekasi</h1>
          </div>
       </div>
-      <input type="text" class="form-control mb-5" placeholder="Cari Wisata" id="searchWisata">
+      <input type="text" class="form-control mb-5" placeholder="Cari Kuliner" id="searchKuliner" oninput="searchKuliner(this.value)">
       <div class="row" id="kuliner-list">
       </div>
    </div>
@@ -40,7 +40,7 @@
             <h1 class="display-4">Wisata Keren Di Bekasi</h1>
          </div>
       </div>
-      <input type="text" class="form-control mb-5" placeholder="Cari Wisata" id="searchWisata">
+      <input type="text" class="form-control mb-5" placeholder="Cari Wisata" id="searchWisata" oninput="searchWisata(this.value)">
       <div class="row" id="wisata-list">
       </div>
    </div>
@@ -119,6 +119,90 @@
                 }
             }
         });
+    }
+
+    function searchWisata(text) {
+      let data = {
+         search : text
+      }
+      $.ajax({
+         type: "post",
+         url: "{{ url('/wisata-list/search') }}",
+         data: data,
+         dataType: "json",
+         success: function (response) {
+            if(response.code == 200) {
+               let html = '';
+                    response.data.forEach(element => {
+                        let image_url = "{{ url('/storage') }}/"+element.image_path;
+                        html += `
+                        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                            <div class="card text-white card-has-bg click-col" style="background-image:url(${image_url});">
+                                <div class="card-img-overlay d-flex flex-column">
+                                    <div class="card-body">
+                                        <h4 class="card-title mt-0 "><a class="text-white" herf="#">${element.name}</a></h4>
+                                        <small><i class="far fa-clock"></i> Uploaded : ${ new Date (Date.parse(element.created_at))}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                      
+                        `;
+                        
+                    });
+                    if(response.data.length == 0) {
+                     html += `
+                        <h1>NO DATA AVAILABLE</h1>
+
+                        
+                     `
+                    }
+                    $("#wisata-list").html(html);
+
+            }
+         }
+      });
+    }
+
+    function searchKuliner(text) {
+      let data = {
+         search : text
+      }
+      $.ajax({
+         type: "post",
+         url: "{{ url('/kuliner-list/search') }}",
+         data: data,
+         dataType: "json",
+         success: function (response) {
+            if(response.code == 200) {
+               let html = '';
+                    response.data.forEach(element => {
+                        let image_url = "{{ url('/storage') }}/"+element.image_path;
+                        html += `
+                        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                            <div class="card text-white card-has-bg click-col" style="background-image:url(${image_url});">
+                                <div class="card-img-overlay d-flex flex-column">
+                                    <div class="card-body">
+                                        <h4 class="card-title mt-0 "><a class="text-white" herf="#">${element.name}</a></h4>
+                                        <small><i class="far fa-clock"></i> Uploaded : ${ new Date (Date.parse(element.created_at))}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                      
+                        `;
+                        
+                    });
+                    if(response.data.length == 0) {
+                     html += `
+                        <h1>NO DATA AVAILABLE</h1>
+
+                        
+                     `
+                    }
+                    $("#kuliner-list").html(html);
+
+            }
+         }
+      });
     }
 </script>
 @endsection

@@ -78,7 +78,6 @@
     }
 
     function searchKuliner(text) {
-      console.log(text);
       let data = {
          search : text
       }

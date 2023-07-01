@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Culinary;
 use App\Models\Tours;
+use App\Models\Culinary;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller
 {
@@ -32,6 +33,34 @@ class HomeController extends Controller
         ]);
     }
 
+
+    public function kuliner_list(Request $request)
+    {
+        try {
+
+             $kuliner = Culinary::with(['user','categories'])->get();
+
+            return response()->json([
+                'code' => 200,
+                'message' => 'Fetch Data Success',
+                'data' => $kuliner
+            ]);
+        } catch (\Throwable $exception) {
+            $message = array(
+                "url"       => url()->current(),
+                "error"     => $exception->getMessage() . " LINE : " . $exception->getLine(),
+                "data"      => $request,
+                "controller"=> app('request')->route()->getAction(),
+            );
+            Log::critical($message);
+            return response()->json([
+                'code' => 400,
+                'message' => trans('messages.went_wrong'),
+                'data' => $message
+            ]);
+        }
+    }
+
     public function wisata_index(Request $request)
     {
         $wisata = Tours::with('user')->get();
@@ -39,6 +68,32 @@ class HomeController extends Controller
         return view('home.wisata.wisata',[
             'wisata' => $wisata
         ]);
+    }
+
+    public function wisata_list(Request $request)
+    {
+        try {
+            $wisata = Tours::with(['user','categories'])->get();
+
+            return response()->json([
+                'code' => 200,
+                'message' => 'Fetch Data Success',
+                'data' => $wisata
+            ]);
+        } catch (\Throwable $exception) {
+            $message = array(
+                "url"       => url()->current(),
+                "error"     => $exception->getMessage() . " LINE : " . $exception->getLine(),
+                "data"      => $request,
+                "controller"=> app('request')->route()->getAction(),
+            );
+            Log::critical($message);
+            return response()->json([
+                'code' => 400,
+                'message' => trans('messages.went_wrong'),
+                'data' => $message
+            ]);
+        }
     }
 
     public function about_index(Request $request)

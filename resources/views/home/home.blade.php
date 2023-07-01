@@ -418,7 +418,7 @@ http://www.templatemo.com/tm-507-victory
     
 
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    {{-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> --}}
     <script>window.jQuery || document.write('<script src="{{ asset('js/vendor/jquery-1.11.2.min.js') }}"><\/script>')</script>
 
     <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
@@ -426,7 +426,7 @@ http://www.templatemo.com/tm-507-victory
     <script src="{{ asset('js/plugins.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    {{-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script> --}}
     <script type="text/javascript">
     $(document).ready(function() {
         // navigation click actions 

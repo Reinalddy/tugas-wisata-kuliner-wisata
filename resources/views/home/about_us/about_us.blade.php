@@ -1,290 +1,300 @@
 @extends('home.master-home.master')
 @section('content')
-<section class="banner">
-  {{-- @include('home.banner.banner') --}}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h4>Here you can find beutiful place and delicious food</h4>
-                <h2>Bekasi Kotaku</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet saepe sit nam, quaerat iste non laudantium sint! Inventore, provident libero!</p>
-            </div>
-        </div>
+<section>
+    <!-- Intro -->
+<!-- Jumbotron -->
+    <div
+    class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white vh-100"
+    style="background-image: url('/img/banner-bg.jpg'); background-repeat: no-repeat;"
+    >
+    <h1 class="mb-3 h2" style="margin-top: 15%;">Bekasi Kotaku</h1>
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+        labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+        neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+    </p>
     </div>
+<!-- Jumbotron -->
+    <!-- Intro -->
 </section>
 
-
-
-{{-- <section class="cook-delecious">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-md-offset-1">
-                <div class="first-image">
-                    <img src="img/cook_01.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cook-content">
-                    <h4>We cook delecious</h4>
-                    <div class="contact-content">
-                        <span>You can call us on:</span>
-                        <h6>+ 1234 567 8910</h6>
-                    </div>
-                    <span>or</span>
-                    <div class="primary-white-button">
-                        <a href="#" class="scroll-link" data-id="book-table">Order Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="second-image">
-                    <img src="img/cook_02.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
-
-
-
-{{-- <section class="services" style="margin-top: 5%;>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="service-item">
-                    <a href="menu.html">
-                    <img src="img/cook_breakfast.png" alt="Breakfast">
-                    <h4>Breakfast</h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="service-item">
-                    <a href="menu.html">
-                    <img src="img/cook_lunch.png" alt="Lunch">
-                    <h4>Lunch</h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="service-item">
-                    <a href="menu.html">
-                    <img src="img/cook_dinner.png" alt="Dinner">
-                    <h4>Dinner</h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="service-item">
-                    <a href="menu.html">
-                    <img src="img/cook_dessert.png" alt="Desserts">
-                    <h4>Desserts</h4>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
-
-
-
-{{-- <section id="book-table">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="heading">
-                    <h2>Book Your Table Now</h2>
-                </div>
-            </div>
-            <div class="col-md-4 col-md-offset-2 col-sm-12">
-                <div class="left-image">
-                    <img src="img/book_left_image.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="right-info">
-                    <h4>Reservation</h4>
-                    <form id="form-submit" action="" method="get">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <select required name='day' onchange='this.form.()'>
-                                        <option value="">Select day</option>
-                                        <option value="Monday">Monday</option>
-                                        <option value="Tuesday">Tuesday</option>
-                                        <option value="Wednesday">Wednesday</option>
-                                        <option value="Thursday">Thursday</option>
-                                        <option value="Friday">Friday</option>
-                                        <option value="Saturday">Saturday</option>
-                                        <option value="Sunday">Sunday</option>
-                                    </select>
-                                </fieldset>
-                            </div>
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <select required name='hour' onchange='this.form.()'>
-                                        <option value="">Select hour</option>
-                                        <option value="10-00">10:00</option>
-                                        <option value="12-00">12:00</option>
-                                        <option value="14-00">14:00</option>
-                                        <option value="16-00">16:00</option>
-                                        <option value="18-00">18:00</option>
-                                        <option value="20-00">20:00</option>
-                                        <option value="22-00">22:00</option>
-                                    </select>
-                                </fieldset>
-                            </div>
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <input name="name" type="name" class="form-control" id="name" placeholder="Full name" required>
-                                </fieldset> 
-                            </div>
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <input name="phone" type="phone" class="form-control" id="phone" placeholder="Phone number" required>
-                                </fieldset>
-                            </div>
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <select required class="person" name='persons' onchange='this.form.()'>
-                                        <option value="">How many persons?</option>
-                                        <option value="1-Person">1 Person</option>
-                                        <option value="2-Persons">2 Persons</option>
-                                        <option value="3-Persons">3 Persons</option>
-                                        <option value="4-Persons">4 Persons</option>
-                                        <option value="5-Persons">5 Persons</option>
-                                        <option value="6-Persons">6 Persons</option>
-                                    </select>
-                                </fieldset>
-                            </div>
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <button type="submit" id="form-submit" class="btn">Book Table</button>
-                                </fieldset>
-                            </div>
+<section class="wrapper">
+   <div class="container">
+      <div class="row">
+         <div class="col text-center mb-5">
+            <h1 class="display-4">Rekomendasi Kuliner Enak Di bekasi</h1>
+         </div>
+      </div>
+      <div class="row">
+        <input type="text" class="form-control mb-5" placeholder="Cari Kuliner" id="searchKuliner">
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
+               <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+               <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                     <small class="card-meta mb-2">Thought Leadership</small>
+                     <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                     <div class="media">
+                        <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+                        <div class="media-body">
+                           <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                           <small>Director of UI/UX</small>
                         </div>
-                    </form>
-                </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-</section> --}}
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tree,nature');">
+               <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+               <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                     <small class="card-meta mb-2">Thought Leadership</small>
+                     <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                     <div class="media">
+                        <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+                        <div class="media-body">
+                           <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                           <small>Director of UI/UX</small>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?computer,design');">
+               <img class="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+               <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                     <small class="card-meta mb-2">Thought Leadership</small>
+                     <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                     <div class="media">
+                        <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+                        <div class="media-body">
+                           <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                           <small>Director of UI/UX</small>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
+               <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+               <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                     <small class="card-meta mb-2">Thought Leadership</small>
+                     <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                     <div class="media">
+                        <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+                        <div class="media-body">
+                           <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                           <small>Director of UI/UX</small>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tree,nature');">
+               <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+               <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                     <small class="card-meta mb-2">Thought Leadership</small>
+                     <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                     <div class="media">
+                        <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+                        <div class="media-body">
+                           <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                           <small>Director of UI/UX</small>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?computer,design');">
+               <img class="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+               <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                     <small class="card-meta mb-2">Thought Leadership</small>
+                     <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                     <div class="media">
+                        <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+                        <div class="media-body">
+                           <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                           <small>Director of UI/UX</small>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
 
-
-
-{{-- <section class="get-app">
-    <div class="container">
-        <div class="row">
-            <div class="heading">
-                <h2>Get application for your phone</h2>
+<section class="wrapper">
+   <div class="container">
+      <div class="row">
+         <div class="col text-center mb-5">
+            <h1 class="display-4">Rekomendasi Wisata Keren Di Bekasi</h1>
+         </div>
+      </div>
+      <div class="row">
+        <input type="text" class="form-control mb-5" placeholder="Cari Wisata" id="searchWisata">
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
+               <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+               <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                     <small class="card-meta mb-2">Thought Leadership</small>
+                     <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                     <div class="media">
+                        <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+                        <div class="media-body">
+                           <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                           <small>Director of UI/UX</small>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="primary-white-button">
-                <a href="#">Download now</a>
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tree,nature');">
+               <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+               <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                     <small class="card-meta mb-2">Thought Leadership</small>
+                     <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                     <div class="media">
+                        <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+                        <div class="media-body">
+                           <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                           <small>Director of UI/UX</small>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-</section> --}}
-
-
-
-<section class="featured-food">
-    <div class="container">
-        <div class="row">
-            <div class="heading">
-                <h2>Who Make This Website</h2>
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?computer,design');">
+               <img class="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+               <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                     <small class="card-meta mb-2">Thought Leadership</small>
+                     <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                     <div class="media">
+                        <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+                        <div class="media-body">
+                           <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                           <small>Director of UI/UX</small>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="food-item">
-                    <h2>REINALDDY</h2>
-                    {{-- <img src="img/breakfast_item.jpg" alt=""> --}}
-                    {{-- <div class="price">312110522</div> --}}
-                    <div class="text-content">
-                        <h4>312110522</h4>
-                        <p>Full Stack Developer</p>
-                    </div>
-                </div>
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
+               <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+               <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                     <small class="card-meta mb-2">Thought Leadership</small>
+                     <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                     <div class="media">
+                        <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+                        <div class="media-body">
+                           <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                           <small>Director of UI/UX</small>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-4">
-                <div class="food-item">
-                    <h2>HELMI ANUAR</h2>
-                    {{-- <img src="img/lunch_item.jpg" alt=""> --}}
-                    {{-- <div class="price">$7.50</div> --}}
-                    <div class="text-content">
-                        <h4>312110475</h4>
-                        <p>Front End Developer</p>
-                    </div>
-                </div>
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tree,nature');">
+               <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+               <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                     <small class="card-meta mb-2">Thought Leadership</small>
+                     <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                     <div class="media">
+                        <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+                        <div class="media-body">
+                           <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                           <small>Director of UI/UX</small>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-4">
-                <div class="food-item">
-                    <h2>ISEP SOPIANDANI</h2>
-                    {{-- <img src="img/lunch_item.jpg" alt=""> --}}
-                    {{-- <div class="price">$7.50</div> --}}
-                    <div class="text-content">
-                        <h4>312110593</h4>
-                        <p>Front End Developer</p>
-                    </div>
-                </div>
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?computer,design');">
+               <img class="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+               <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                     <small class="card-meta mb-2">Thought Leadership</small>
+                     <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                     <div class="media">
+                        <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+                        <div class="media-body">
+                           <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                           <small>Director of UI/UX</small>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-4">
-                <div class="food-item">
-                    <h2>MUHAMAD WAHYU TRISNA AJI</h2>
-                    {{-- <img src="img/lunch_item.jpg" alt=""> --}}
-                    {{-- <div class="price">$7.50</div> --}}
-                    <div class="text-content">
-                        <h4>312110615</h4>
-                        <p>Front End Developer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="food-item">
-                    <h2>MUHAMMAD IQBAL</h2>
-                    {{-- <img src="img/lunch_item.jpg" alt=""> --}}
-                    {{-- <div class="price">$7.50</div> --}}
-                    <div class="text-content">
-                        <h4>312110357</h4>
-                        <p>Back End Developer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="food-item">
-                    <h2>ELIA WILLIAM ARITONANG</h2>
-                    {{-- <img src="img/lunch_item.jpg" alt=""> --}}
-                    {{-- <div class="price">$7.50</div> --}}
-                    <div class="text-content">
-                        <h4>312110456</h4>
-                        <p>Front End Developer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="food-item">
-                    <h2>ALFIYAN NURUZZAMAN</h2>
-                    {{-- <img src="img/lunch_item.jpg" alt=""> --}}
-                    {{-- <div class="price">$7.50</div> --}}
-                    <div class="text-content">
-                        <h4>312110378</h4>
-                        <p>Front End Developer</p>
-                    </div>
-                </div>
-            </div>
-            {{-- <div class="col-md-4">
-                <div class="food-item">
-                    <h2>Dinner</h2>
-                    <img src="img/dinner_item.jpg" alt="">
-                    <div class="price">$12.50</div>
-                    <div class="text-content">
-                        <h4>Batch Squid Jean Shorts</h4>
-                        <p>Dreamcatcher squid ennui cliche chicharros nes echo  small batch jean shorts hexagon street art knausgaard wolf...</p>
-                    </div>
-                </div>
-            </div> --}}
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
 </section>
 
 
@@ -294,97 +304,28 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="heading">
-                    <h2>Our blog post</h2>
+                    <h2>Rekomendasi Wisata</h2>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <img src="img/blog_post_01.jpg" alt="">
-                    <div class="date">26 Oct 2017</div>
+            @foreach ($tours as $item)
+            <div class="col-md-4">
+                <div class="" style="background-color:white;">
+                    <img src="{{ url("/storage/$item->image_path") }}" alt="" style="width: 80%; height:100%;">
                     <div class="right-content">
-                        <h4>Stumptown Tofu Schlitz</h4>
-                        <span>Branding / Admin</span>
-                        <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
+                        <h4>{{ $item->name }}</h4>
+                        <p>{{ $item->desc }}</p>
                         <div class="text-button">
                             <a href="#">Continue Reading</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <img src="img/blog_post_02.jpg" alt="">
-                    <div class="date">21 Oct 2017</div>
-                    <div class="right-content">
-                        <h4>Succulents Hashtag Folk</h4>
-                        <span>Branding / Admin</span>
-                        <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
-                        <div class="text-button">
-                            <a href="#">Continue Reading</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <img src="img/blog_post_03.jpg" alt="">
-                    <div class="date">11 Oct 2017</div>
-                    <div class="right-content">
-                        <h4>Knaus Sriracha Pinterest</h4>
-                        <span>Dessert / Chef</span>
-                        <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
-                        <div class="text-button">
-                            <a href="#">Continue Reading</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <img src="img/blog_post_04.jpg" alt="">
-                    <div class="date">03 Oct 2017</div>
-                    <div class="right-content">
-                        <h4>Crucifix Selvage Coat</h4>
-                        <span>Plate / Chef</span>
-                        <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
-                        <div class="text-button">
-                            <a href="#">Continue Reading</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                
+            @endforeach
         </div>
     </div>
 </section> --}}
-
-
-
-{{-- <section class="sign-up">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="heading">
-                    <h2>Signup for our newsletters</h2>
-                </div>
-            </div>
-        </div>
-        <form id="contact" action="" method="get">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-3">
-                    <fieldset>
-                        <input name="email" type="text" class="form-control" id="email" placeholder="Enter your email here..." required>
-                    </fieldset>
-                </div>
-                <div class="col-md-2">
-                    <fieldset>
-                        <button type="submit" id="form-submit" class="btn">Send Message</button>
-                    </fieldset>
-                </div>
-            </div>
-        </form>
-    </div>
-</section>  --}}
     
 @endsection

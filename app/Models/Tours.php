@@ -16,4 +16,9 @@ class Tours extends Model
     {
         return $this->belongsTo(User::class,'uploaded_by','id');
     }
+
+    public function categories(): BelongsTo
+    {
+        return $this->belongsTo(Category::class,'uploaded_by','id');
+    }
 }

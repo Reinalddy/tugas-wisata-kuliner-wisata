@@ -27,7 +27,10 @@ Route::get('/kuliner', [HomeController::class, 'kuliner_index']);
 Route::get('/about-us', [HomeController::class, 'about_index']);
 
 Route::post('/wisata-list', [HomeController::class, 'wisata_list']);
+Route::post('/wisata-list/search', [HomeController::class, 'wisata_search']);
+
 Route::post('/kuliner-list', [HomeController::class, 'kuliner_list']);
+Route::post('/kuliner-list/search', [HomeController::class, 'kuliner_search']);
 
 Route::get('/login-admin',[AdminController::class,'login_admin_index']);
 Route::post('/login-admin',[AdminController::class,'proccess_login']);

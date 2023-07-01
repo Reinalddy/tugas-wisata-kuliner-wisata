@@ -96,6 +96,58 @@ class HomeController extends Controller
         }
     }
 
+    public function wisata_search(Request $request)
+    {
+        try {
+            $kuliner = Tours::with(['user','categories'])->where('name','like','%'.$request->search.'%',)->get();
+
+            return response()->json([
+                'code' => 200,
+                'message' => "Search Data Success",
+                'data' => $kuliner
+            ]);
+        } catch (\Throwable $exception) {
+            $message = array(
+                "url"       => url()->current(),
+                "error"     => $exception->getMessage() . " LINE : " . $exception->getLine(),
+                "data"      => $request,
+                "controller"=> app('request')->route()->getAction(),
+            );
+            Log::critical($message);
+            return response()->json([
+                'code' => 400,
+                'message' => trans('messages.went_wrong'),
+                'data' => $message
+            ]);
+        }
+    }
+
+    public function kuliner_search(Request $request)
+    {
+        try {
+            $kuliner = Culinary::with(['user','categories'])->where('name','like','%'.$request->search.'%',)->get();
+
+            return response()->json([
+                'code' => 200,
+                'message' => "Search Data Success",
+                'data' => $kuliner
+            ]);
+        } catch (\Throwable $exception) {
+            $message = array(
+                "url"       => url()->current(),
+                "error"     => $exception->getMessage() . " LINE : " . $exception->getLine(),
+                "data"      => $request,
+                "controller"=> app('request')->route()->getAction(),
+            );
+            Log::critical($message);
+            return response()->json([
+                'code' => 400,
+                'message' => trans('messages.went_wrong'),
+                'data' => $message
+            ]);
+        }
+    }
+
     public function about_index(Request $request)
     {
         return view('home.about_us.about_us');

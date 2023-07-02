@@ -75,6 +75,7 @@ class AdminController extends Controller
             $kuliner->image_path = $request->file('image')->store('assets/culinary', 'public');
             $kuliner->uploaded_by = Auth::user()->id;
             $kuliner->category_id = $request->category;
+            $kuliner->google_maps = $request->gmaps;
             $kuliner->save();
 
             DB::commit();
@@ -175,6 +176,7 @@ class AdminController extends Controller
             $tours->image_path = $request->file('image')->store('assets/culinary', 'public');
             $tours->uploaded_by = Auth::user()->id;
             $tours->category_id = $request->category;
+            $tours->google_maps = $request->gmaps;
             $tours->save();
 
             DB::commit();

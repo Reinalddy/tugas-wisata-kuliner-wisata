@@ -10838,11 +10838,14 @@ textarea.form-control-lg {
                     <div class="col-md-6">
                         <h1 class="display-5 fw-bolder">{{ $wisata->name }}</h1>
                         <p class="lead">{{ $wisata->desc }}</p>
+                        <p>Show on Goole Maps</p>
+                        {{!! $wisata->google_maps !!}}
+
                     </div>
                 </div>
             </div>
         </section>
-
+  
         <!-- Related items section-->
         <section class="py-5 bg-light">
             <div class="container mt-5">
@@ -10865,5 +10868,6 @@ textarea.form-control-lg {
                   </div>
             </div>
         </section>
+
 
 @endsection

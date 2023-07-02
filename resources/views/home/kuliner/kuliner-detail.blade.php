@@ -10838,6 +10838,8 @@ textarea.form-control-lg {
                     <div class="col-md-6">
                         <h1 class="display-5 fw-bolder">{{ $kuliner->name }}</h1>
                         <p class="lead">{{ $kuliner->desc }}</p>
+                        <p>Show on Goole Maps</p>
+                        {{!! $kuliner->google_maps !!}}
                     </div>
                 </div>
             </div>

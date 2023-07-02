@@ -52,6 +52,10 @@
                       <input type="text" class="form-control" id="name" name="name">
                     </div>
                     <div class="form-group mt-3">
+                      <label for="name" class="form-label">Google Maps</label>
+                      <input type="text" class="form-control" id="gmaps" name="gmaps">
+                    </div>
+                    <div class="form-group mt-3">
                       <label for="desc" class="form-label">Culinary Description</label>
                       <textarea name="desc" id="desc" cols="30" rows="10" class="form-control"></textarea>
                     </div>
@@ -60,7 +64,7 @@
                       <input type="file" name="image" id="image" class="form-control">
                     </div>
                     <div class="form-group mt-3">
-                      <label for="desc" class="form-label">Culinary Image</label>
+                      <label for="desc" class="form-label">Culinary Category</label>
                       <select id="categories" class="form-control" name="category">
                         @foreach ($categories as $item)
                             

@@ -10854,7 +10854,7 @@ textarea.form-control-lg {
                               <div class="card text-white card-has-bg click-col" style="background-image:url('{{ url("/storage/$item->image_path") }}');">
                                   <div class="card-img-overlay d-flex flex-column">
                                       <div class="card-body">
-                                      <a href="{{ url("/kuliner/$item->id") }}" style="text-decoration: none; color:black;"><h1>{{ $item->name }}</h1></a>
+                                      <a href="{{ url("/kuliner/$item->id") }}" style="text-decoration: none; color:white;"><h1>{{ $item->name }}</h1></a>
                                           
                                       </div>
                                   </div>

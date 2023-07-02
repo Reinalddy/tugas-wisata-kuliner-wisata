@@ -10,9 +10,7 @@
     <h1 class="mb-3 h2" style="margin-top: 15%;">Bekasi Kotaku</h1>
 
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
-        labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
-        neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+        Kota Bekasi memiliki kekayaan kuliner dan tempat wisata yang menarik untuk dieksplorasi. Bekasi menawarkan beragam kuliner lezat yang dapat memanjakan lidah Anda. Dari makanan tradisional seperti nasi uduk, soto mie, hingga hidangan modern dan internasional, ada banyak pilihan untuk dinikmati Kota Bekasi juga memiliki sejumlah tempat wisata alam yang mempesona. Mulai dari Taman Kota Bekasi, Taman Jomblo, hingga Kebun Raya Bumi Perkemahan Cibubur, Anda dapat menikmati keindahan alam dan menyegarkan diri.
     </p>
     </div>
 <!-- Jumbotron -->

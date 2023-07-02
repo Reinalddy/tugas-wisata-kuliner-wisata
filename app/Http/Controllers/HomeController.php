@@ -33,6 +33,35 @@ class HomeController extends Controller
         ]);
     }
 
+    public function kuliner_index_detail(Request $request,$id)
+    {
+        try {
+            $kuliner = Culinary::with(['user','categories'])->where('id',$id)->first();
+            $kuliner_all = Culinary::with(['user','categories'])->get();
+
+
+            return view('home.kuliner.kuliner-detail',[
+                 'kuliner' => $kuliner,
+                 'kuliner_all' => $kuliner_all
+            ]);
+
+
+        } catch (\Throwable $exception) {
+            $message = array(
+                "url"       => url()->current(),
+                "error"     => $exception->getMessage() . " LINE : " . $exception->getLine(),
+                "data"      => $request,
+                "controller"=> app('request')->route()->getAction(),
+            );
+            Log::critical($message);
+            return response()->json([
+                'code' => 400,
+                'message' => trans('messages.went_wrong'),
+                'data' => $message
+            ]);
+        }
+    }
+
 
     public function kuliner_list(Request $request)
     {
@@ -68,6 +97,35 @@ class HomeController extends Controller
         return view('home.wisata.wisata',[
             'wisata' => $wisata
         ]);
+    }
+
+    public function wisata_index_detail(Request $request,$id)
+    {
+        try {
+            $wisata = Tours::with(['user','categories'])->where('id',$id)->first();
+            $wisata_all = Tours::with(['user','categories'])->get();
+
+
+            return view('home.wisata.wisata-detail',[
+                 'wisata' => $wisata,
+                 'wisata_all' => $wisata_all
+            ]);
+
+
+        } catch (\Throwable $exception) {
+            $message = array(
+                "url"       => url()->current(),
+                "error"     => $exception->getMessage() . " LINE : " . $exception->getLine(),
+                "data"      => $request,
+                "controller"=> app('request')->route()->getAction(),
+            );
+            Log::critical($message);
+            return response()->json([
+                'code' => 400,
+                'message' => trans('messages.went_wrong'),
+                'data' => $message
+            ]);
+        }
     }
 
     public function wisata_list(Request $request)

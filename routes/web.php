@@ -23,7 +23,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/wisata', [HomeController::class, 'wisata_index']);
+Route::get('/wisata/{id}', [HomeController::class, 'wisata_index_detail']);
+
 Route::get('/kuliner', [HomeController::class, 'kuliner_index']);
+Route::get('/kuliner/{id}', [HomeController::class, 'kuliner_index_detail']);
+
 Route::get('/about-us', [HomeController::class, 'about_index']);
 
 Route::post('/wisata-list', [HomeController::class, 'wisata_list']);

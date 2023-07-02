@@ -57,12 +57,13 @@
                     let html = '';
                     response.data.forEach(element => {
                         let image_url = "{{ url('/storage') }}/"+element.image_path;
+                        let url = "{{ url('/kuliner') }}/"+element.id;
                         html += `
                         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
                             <div class="card text-white card-has-bg click-col" style="background-image:url(${image_url});">
                                 <div class="card-img-overlay d-flex flex-column">
                                     <div class="card-body">
-                                        <h4 class="card-title mt-0 "><a class="text-white" herf="#">${element.name}</a></h4>
+                                        <a href="${url}" style="text-decoration: none; color:white;"><h4 class="card-title mt-0">${element.name}</h4></a>
                                         <small><i class="far fa-clock"></i> Uploaded : ${ new Date (Date.parse(element.created_at))}</small>
                                     </div>
                                 </div>
@@ -91,12 +92,17 @@
                let html = '';
                     response.data.forEach(element => {
                         let image_url = "{{ url('/storage') }}/"+element.image_path;
+                        let url = "{{ url('/kuliner') }}/"+element.id;
                         html += `
                         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
                             <div class="card text-white card-has-bg click-col" style="background-image:url(${image_url});">
                                 <div class="card-img-overlay d-flex flex-column">
                                     <div class="card-body">
-                                        <h4 class="card-title mt-0 "><a class="text-white" herf="#">${element.name}</a></h4>
+                                        <a href="${url}" style="text-decoration: none; color:white;>
+                                            
+                                            <h1 class="card-title mt-0">${element.name}</h1>
+
+                                        </a>
                                         <small><i class="far fa-clock"></i> Uploaded : ${ new Date (Date.parse(element.created_at))}</small>
                                     </div>
                                 </div>
